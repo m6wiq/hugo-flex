@@ -1,0 +1,29 @@
+# Welcome on M6WIQ's Gemini capsule!
+{{ site.Params.slogan }}
+{{ $geminiBaseUrl := site.Params.geminiBaseUrl }}
+
+## 5 latest Gemlog posts:
+{{ range first 5 (where site.RegularPages "Section" "in" "gemlog") }}
+  {{- $dateFormat := .Date.Format "2006-01-02" -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
+{{ end }}
+=> {{ $geminiBaseUrl}}/gemlog/index.xml Gemlog RSS feed
+=> {{ $geminiBaseUrl }}/gemlog/ All my Gemlog posts
+
+## 3 latest blog posts:
+{{ range first 3 (where site.RegularPages "Section" "in" "posts") }}
+  {{- $dateFormat := .Date.Format "2006-01-02" -}}
+=> {{ $geminiBaseUrl }}/{{ replace .File.Path ".md" ".gmi" }}    {{ $dateFormat }} - {{ .Title }}
+{{ end }}
+=> {{ $geminiBaseUrl}}/posts/index.xml Blog RSS feed
+=> {{ $geminiBaseUrl }}/posts/index.gmi All my Blog posts
+
+Blog posts are transformed from markdown in a bit of a hacky way, so they are usually better displayed in their web version. Many thanks to Barcadi55 for his tutorial on setting Gemini/Hugo integration.
+=> https://www.m6wiq.uk My Blog on the Web (https link)
+
+## Where to find me?
+- Via email: gemini _at_ m6wiq _dot_ uk
+- On IRC: m6wiq on libera chat
+- On github:
+=> https://github.com/m6wiq
+
