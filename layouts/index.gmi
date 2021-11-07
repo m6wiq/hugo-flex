@@ -24,6 +24,5 @@ Blog posts are transformed from markdown in a bit of a hacky way, so they are us
 ## Where to find me?
 - Via email: gemini _at_ m6wiq _dot_ uk
 - On IRC: m6wiq on libera chat
-- On github:
-=> https://github.com/m6wiq
+- On github: => https://github.com/m6wiq
 
