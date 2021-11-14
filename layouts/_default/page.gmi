@@ -1,7 +1,0 @@
-# {{ .Title }}
-
-{{ $content := .RawContent -}}
-{{ $content := $content | replaceRE "`(.+?)`" "$1" -}}
-{{ $content := $content | replaceRE "`" "```" -}}
-{{ $content := $content | replaceRE "\\*(.+?)\\*" "$1" -}}
-{{ $content }}
